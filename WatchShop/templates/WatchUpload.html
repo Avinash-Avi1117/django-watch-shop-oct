@@ -1,0 +1,15 @@
+{% extends 'main.html' %} {% block body_block %}
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %} 
+    
+    <div class="form-group">
+    
+    {{form.name.label_tag}} {{form.name}} 
+    {{form.descripation.label_tag}} {{form.descripation}}
+    {{form.price.label_tag}} {{form.price}}
+    {{form.image.label_tag}} {{form.image}}
+    <button type="submit" class="submit-button">submit</button>
+    </div>
+</form>
+
+{% endblock %}
